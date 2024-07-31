@@ -1,0 +1,20 @@
+/ {
+  model = "Nordic NRF7002 DK NRF5340 Application";
+  compatible = "nordic,nrf7002-dk-nrf5340-cpuapp";
+
+  leds {
+    compatible = "gpio-leds";
+    led0: led_0 {
+      gpios = <&gpio1 10 GPIO_ACTIVE_LOW>;
+      label = "Triac Control Pin";
+    };
+  };
+
+  buttons {
+    compatible = "gpio-keys";
+    button0: button_0 {
+      gpios = <&gpio0 4 (GPIO_ACTIVE_LOW)>;
+      label = "AC Wave Detecting Pin";
+    };
+  };
+};
